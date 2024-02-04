@@ -18,4 +18,3 @@ Python:
         2nd for loop: iterates through each char in t and deincrements each occurence of char x in String t and stores the values using the dictionary counts
         3rd for loop: checks if each value in counts is a 0; if a value != 0, then return False
     The logic behind this program is that if every value in counts is 0, that means that each letter in String s and String t occurs the same amount of times, making them anagrams.
-    

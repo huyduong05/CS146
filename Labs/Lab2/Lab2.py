@@ -6,7 +6,7 @@ def isAnagram(s, t):
         return False
     
     counts = defaultdict(int)
-        
+    
     for x in s:
         counts[x] += 1
 
