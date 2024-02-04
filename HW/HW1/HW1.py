@@ -1,5 +1,5 @@
 # brute force (two for loops)
-def isPalindrome1(self, s): 
+def isPalindrome1(s:str) -> bool: 
     s = s.lower()
     editted = ""
 
@@ -7,7 +7,7 @@ def isPalindrome1(self, s):
         if c.isalnum():
             editted += c
         
-    for i in range(len(editted) / 2):
+    for i in range(len(editted) // 2):
         if not editted[i] == editted[len(editted) - i - 1]: 
             return False
     
@@ -34,4 +34,8 @@ def isPalindrome2(s: str) -> bool:
     return True
 
 
-words = ["A man, a plan, a canal: Panama", "racecar", "race a car", " "]
+words = ["racecar", "palindrome", "a!1b,,,,:::#b@1a"]
+
+for x in words:
+    print(isPalindrome1(x))
+    print(isPalindrome2(x))

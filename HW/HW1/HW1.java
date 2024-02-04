@@ -2,7 +2,7 @@ package HW.HW1;
 
 public class HW1 {
     //brute force (two for loops)
-    public boolean isPalindrome1(String s) {
+    public static boolean isPalindrome1(String s) {
         s = s.toLowerCase();
         String edited = ""; 
         for (int i = 0; i < s.length(); i++) { 
@@ -24,7 +24,7 @@ public class HW1 {
     }
 
     //two pointer
-    public boolean isPalindrome2(String s) {
+    public static boolean isPalindrome2(String s) {
         s = s.toLowerCase();
         int p1 = 0; 
         int p2 = s.length() - 1;
@@ -46,6 +46,14 @@ public class HW1 {
             }
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        String words[] = {"racecar", "palindrome", "a!1b,,,,:::#b@1a"};
+        for(String x : words) { 
+            System.out.println(isPalindrome1(x));
+            System.out.println(isPalindrome2(x));
+        }
     }
 }    
 
