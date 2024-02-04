@@ -2,6 +2,8 @@ from collections import defaultdict
 
 
 def isAnagram(s, t):
+    if (len(s) != len(t)): 
+        return False
     
     counts = defaultdict(int)
         

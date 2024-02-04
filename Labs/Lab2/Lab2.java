@@ -42,5 +42,9 @@ public class Lab2 {
         s = "late";
         System.out.println(isAnagram(s, t));
 
+        s = "abcdef";
+        t = "bedcfa";
+        System.out.println(isAnagram(s, t));
+
     }
 }
