@@ -34,5 +34,6 @@ Worst case:
     - O(√n)
 
 Average case: 
+    - If n is a prime number
     - O(√n)
 
