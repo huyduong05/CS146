@@ -36,8 +36,3 @@ Worst case:
 Average case: 
     - O(√n)
 
-
-Overall: 
-- O(√n)
-- Omega(1)
-- theta() DNE
