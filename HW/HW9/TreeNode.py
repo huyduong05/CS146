@@ -1,11 +1,21 @@
 class TreeNode(object):
 
-     def __init__(self, val=0, left=None, right=None):
+    def __init__(self, val=0, left=None, right=None):
 
-         self.val = val
+        self.val = val
 
-         self.left = left
+        self.left = left
 
-         self.right = right
+        self.right = right
 
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        node = root
+
+        while node: 
+            if p.val > node.val and q.val > node.val: 
+                node = node.right
+            elif p.val < node.val and q.val < node.val:
+                node = node.left
+            else:
+                return node
     

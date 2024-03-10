@@ -22,21 +22,18 @@ public class TreeNode {
      }
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null || root == p || root == q) { 
-            return root;
-        }
-        TreeNode left = lowestCommonAncestor(root.left, p, q); 
-        TreeNode right = lowestCommonAncestor(root.right, p, q);
+        TreeNode node = root;
 
-        if (left == null) { 
-            return right; 
-        } else { 
-            if (right == null) { 
-                return left; 
+        while (node != null) { 
+            if (p.val > node.val && q.val > node.val) { 
+                node = node.right;
+            } else if (p.val < node.val && q.val < node.val) { 
+                node = node.left;
             } else { 
-                return root;
+                return node;
             }
         }
+        return node;
     } 
 
 }
