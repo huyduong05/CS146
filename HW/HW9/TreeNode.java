@@ -35,5 +35,8 @@ public class TreeNode {
         }
         return node;
     } 
+    public static void main(String[] args) {
+        
+    }
 
 }

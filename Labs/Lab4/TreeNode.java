@@ -37,9 +37,8 @@ public class TreeNode {
 
         return root; 
     }
-
     public static void main(String[] args) {
-        TreeNode t = new TreeNode();
+        
     }
  }
 
