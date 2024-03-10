@@ -23,22 +23,19 @@ public class TreeNode {
     }
 
     public boolean isValidBST(TreeNode root) {
-        if (root == null) { 
-            return true; 
-        } 
-        
-        if (root.left != null && root.left.val > root.val) { 
-            return false;
-        }
-        if (root.right != null && root.right.val < root.val) { 
-            return false;
-        }
-
-        if (!(isValidBST(root.right) && isValidBST(root.left))) { 
-            return false;
-        }
-        
-        return true; 
+        return valid(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
 
+    public boolean valid(TreeNode curr, long lower, long upper) { 
+        if (curr == null) { 
+            return true;
+        }
+        if (!(lower < curr.val && upper > curr.val)) { 
+            return false;
+        }
+        return valid(curr.left, lower, curr.val) && valid(curr.right, curr.val, upper);
+    }
+    public static void main(String[] args) {
+        
+    }
  }
